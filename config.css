@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+header {
+    background-color: rgba(29, 0, 109, 0.8);
+    font-family: 'Monsterrat', sans-serif;
+}
+
+nav {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+nav a {
+    display: flex;
+    float: right;
+    padding: 10px;
+    margin: 0.35em;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+nav a:first-child {
+    float: left;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
