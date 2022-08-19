@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
 /* Color Codes:
 1D006D - school website color
@@ -15,11 +16,11 @@ html, body {
     padding: 0;
     height: 100%;
     background-color: #645986;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 header {
     font-family: 'Monsterrat', sans-serif;
-    margin: 0;
 }
 
 nav {
@@ -35,7 +36,7 @@ nav a {
     text-decoration: none;
     text-align: center;
     color: white;
-    font-size: 4vw;
+    font-size: 6vw;
 }
 
 nav a:hover {
@@ -73,14 +74,23 @@ nav a:hover {
 }
 
 #splashScreen {
-    background-color: #645986;
+    background-image: url("jWr67J8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    position: relative;
+    padding: 5%;
     margin: 0;
-    padding: 10vh;
+    height: 100%;
+    width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
     nav {
         overflow: auto;
+        box-shadow: 0px 2px 5px black;
     }
 
     nav a {
