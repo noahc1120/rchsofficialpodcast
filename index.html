@@ -12,12 +12,40 @@
     </head>
     <body>
         <header>
-            <nav>
-                <a href="./index.html"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
-                <a href="./contacts.html"><i class="fa-solid fa-envelope"></i>&nbsp;Contacts</a>
-                <a href="./faq.html"><i class="fa-solid fa-circle-info"></i>&nbsp;FAQ</a>
-                <a href="./meetwithus.html"><i class="fa-solid fa-calendar"></i>&nbsp;Meet With Us</a>
+            <div id="splashScreen">
+                <h1>THIS IS RPC</h1>
+            </div>
+            <nav id="navbar">
+                <div class="mobile">
+                    <a class="active" href="./index.html"><i class="fa-solid fa-house"></i></a>
+                    <a href="./contacts.html"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="./faq.html"><i class="fa-solid fa-circle-info"></i></a>
+                    <a href="./meetwithus.html"><i class="fa-solid fa-calendar"></i></a>
+                </div>
+                <div class="widescreen">
+                    <a class="active" href="./index.html">Home</a>
+                    <a href="./contacts.html">Contacts</a>
+                    <a href="./faq.html">FAQ</a>
+                    <a href="./meetwithus.html">Meet With Us</a>
+                </div>
             </nav>
         </header>
+        <div class="content">
+                
+        </div>
+        <script>
+            window.onscroll = function() {stickIt()};
+
+            var navBar = document.getElementById("navbar");
+            var sticky = navBar.offsetTop;
+
+            function stickIt() {
+                if (window.pageYOffset >= sticky) {
+                    navBar.classList.add("sticky");
+                } else {
+                    navBar.classList.remove("sticky");
+                }
+            }
+        </script>
     </body>
 </html>

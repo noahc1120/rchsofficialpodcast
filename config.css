@@ -1,31 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+/* Color Codes:
+1D006D - school website color
+0E0038 - darkened version
+4E0250 - dark purple
+801A86 - purple
+645986 - a blued violet
+D9BBF9 - light pink
+FAFAFF - dif white
+                */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #645986;
+}
+
 header {
-    background-color: rgba(29, 0, 109, 0.8);
     font-family: 'Monsterrat', sans-serif;
+    margin: 0;
 }
 
 nav {
+    overflow: hidden;
     width: 100%;
-    overflow: auto;
-    position: relative;
+    background-color: rgba(29, 0, 109, 1);
 }
 
 nav a {
-    display: flex;
-    float: right;
+    display: block;
+    float: none;
     padding: 10px;
-    margin: 0.35em;
     text-decoration: none;
     text-align: center;
     color: white;
-    font-size: 20px;
-}
-
-nav a:first-child {
-    float: left;
+    font-size: 4vw;
 }
 
 nav a:hover {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.widescreen {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    padding: 15px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+#splashScreen {
+    background-color: #645986;
+    margin: 0;
+    padding: 10vh;
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        overflow: auto;
+    }
+
+    nav a {
+        float: left;
+        width: 25%;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .widescreen {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .active {
+        background-color: inherit;
+        border-bottom: 3px solid #FAFAFF;
+    }
+
+    nav a {
+        width: auto;
+        transition: none;
+        display: flex;
+        float: right;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    nav a:first-child {
+        float: left;
+    }
+
+    nav a:hover {
+        background-color: inherit;
+        border-bottom: 3px solid #FAFAFF;
+    }
 }
