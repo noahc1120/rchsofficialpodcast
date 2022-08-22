@@ -31,7 +31,6 @@ nav {
     overflow: hidden;
     width: 100%;
     background-color: rgba(29, 0, 109, 1);
-    font-family: 'Monsterrat', sans-serif;
 }
 
 nav a {
@@ -48,6 +47,26 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+footer {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-family: 'Monsterrat', sans-serif;
+    background-color: rgba(29, 0, 109, 1);
+    color: white;
+}
+
+.footer-txt-cl {
+    width: 100%;
+    padding: 10px;
+}
+
+.footer-txt-row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .widescreen {
     visibility: hidden;
     display: none;
@@ -62,22 +81,14 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.content {
-    padding: 15px;
-}
-
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-.sticky + .content {
-    padding-top: 60px;
-}
-
 #splash-screen {
-    background-image: url("jWr67J8.png");
+    background-image: url("jWr67J8.png"); /*! NOT FINAL IMAGE!!! */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,13 +98,19 @@ nav a:hover {
     height: 100%;
 }
 
-.scroll-here {
+#splash-button a{
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    text-align: center;
     z-index: 2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4vh;
+    color: red; /*TODO: Change Color Scheme once proper bg image set!!! */
+    padding: 1vh;
+    border: 2px solid red; /*TODO: Change Color Scheme once proper bg image set!!! */
+    border-radius: 15px;
 }
 
 * {
@@ -105,12 +122,18 @@ nav a:hover {
         box-shadow: 0px 2px 5px black;
     }
 
-    nav a {
+    nav a {  
         float: left;
         width: 25%;
         padding: 10px 0;
         transition: all 0.3s ease;
         font-size: 3vw;
+    }
+
+    .footer-txt-cl {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
     }
 }
 
